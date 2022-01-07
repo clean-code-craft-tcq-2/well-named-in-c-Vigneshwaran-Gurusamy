@@ -1,22 +1,17 @@
 #include <stdio.h>
 #include <assert.h>
 
-/*Declare and define variables*/
-const int MAX_COLORPAIR_NAME_CHARS = 16;
+/*Declaration of Variables and Functions*/
+const int MAX_COLORPAIR_NAME_CHARS;
 
 enum MajorColor {WHITE, RED, BLACK, YELLOW, VIOLET};
 enum MinorColor {BLUE, ORANGE, GREEN, BROWN, SLATE};
 
-const char* MajorColorNames[] = {
-    "White", "Red", "Black", "Yellow", "Violet"
-};
+const char* MajorColorNames[5];
+const char* MinorColorNames[5];
 
-const char* MinorColorNames[] = {
-    "Blue", "Orange", "Green", "Brown", "Slate"
-};
-
-int numberOfMajorColors = sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
-int numberOfMinorColors = sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
+int numberOfMajorColors;
+int numberOfMinorColors;
 
 typedef struct {
     enum MajorColor majorColor;
@@ -31,6 +26,7 @@ void testPairToNumber(
     enum MajorColor major,
     enum MinorColor minor,
     int expectedPairNumber);
+    
 int GetPairNumberFromColor(const ColorPair* colorPair);
 ColorPair GetColorFromPairNumber(int pairNumber);
 void ColorPairToString(const ColorPair* colorPair, char* buffer);
