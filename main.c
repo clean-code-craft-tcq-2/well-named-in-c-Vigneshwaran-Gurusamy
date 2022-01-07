@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <assert.h>
-#include <WiringManual.h>
+#include "WiringManual.h"
 
 int numberOfMajorColors = sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
 int numberOfMinorColors = sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
