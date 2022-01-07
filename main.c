@@ -1,5 +1,6 @@
 #include "WiringManual.h"
 
+/*Check the Wiring Pair Manual*/
 int main() {
     testNumberToPair(4, WHITE, BROWN);
     testNumberToPair(5, WHITE, SLATE);
