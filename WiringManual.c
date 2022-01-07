@@ -1,7 +1,7 @@
 #include "WiringManual.h"
 
 /*Definition of Variables and Functions*/
-const int MAX_COLORPAIR_NAME_CHARS = 16;
+const int MAX_COLORPAIR_NAME_CHARS = 10;
 
 const char* MajorColorNames[] = {
     "White", "Red", "Black", "Yellow", "Violet"
@@ -15,7 +15,7 @@ int numberOfMajorColors = sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
 int numberOfMinorColors = sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
 
 void ColorPairToString(const ColorPair* colorPair, char* buffer) {
-    sprintf(buffer, "%s %s",
+    sprintf(buffer, "%s and %s",
         MajorColorNames[colorPair->majorColor],
         MinorColorNames[colorPair->minorColor]);
 }
@@ -33,29 +33,4 @@ ColorPair GetColorFromPairNumber(int pairNumber) {
 int GetPairNumberFromColor(const ColorPair* colorPair) {
     return colorPair->majorColor * numberOfMinorColors +
             colorPair->minorColor + 1;
-}
-
-void testNumberToPair(int pairNumber,
-    enum MajorColor expectedMajor,
-    enum MinorColor expectedMinor)
-{
-    ColorPair colorPair = GetColorFromPairNumber(pairNumber);
-    char colorPairNames[MAX_COLORPAIR_NAME_CHARS];
-    ColorPairToString(&colorPair, colorPairNames);
-    printf("Got pair %s\n", colorPairNames);
-    assert(colorPair.majorColor == expectedMajor);
-    assert(colorPair.minorColor == expectedMinor);
-}
-
-void testPairToNumber(
-    enum MajorColor major,
-    enum MinorColor minor,
-    int expectedPairNumber)
-{
-    ColorPair colorPair;
-    colorPair.majorColor = major;
-    colorPair.minorColor = minor;
-    int pairNumber = GetPairNumberFromColor(&colorPair);
-    printf("Got pair number %d\n", pairNumber);
-    assert(pairNumber == expectedPairNumber);
 }
