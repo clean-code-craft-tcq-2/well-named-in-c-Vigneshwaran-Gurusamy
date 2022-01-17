@@ -23,7 +23,7 @@ void testPairToNumber(
     ColorPair color;
     color.majorColor = major;
     color.minorColor = minor;
-    ColorPairToString(&color, colorNames);
+    GetStringFromColorPair(&color, colorNames);
     int PairNumber = GetPairNumberFromColor(&color);
     printf("PairNumber is %d for the Colors -> %s\n", PairNumber,colorNames);
     assert(PairNumber == expectedPairNumber);
