@@ -15,7 +15,7 @@ int numberOfMajorColors = sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
 int numberOfMinorColors = sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
 
 /*Get the ColorNames as string*/
-void ColorPairToString(const ColorPair* colorPair, char* buffer) {
+void GetStringFromColorPair(const ColorPair* colorPair, char* buffer) {
     sprintf(buffer, "%s and %s",
         MajorColorNames[colorPair->majorColor],
         MinorColorNames[colorPair->minorColor]);
