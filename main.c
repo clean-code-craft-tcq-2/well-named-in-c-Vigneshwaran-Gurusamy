@@ -7,7 +7,7 @@ void testNumberToPair(int PairNumber,
 {
     char colorNames[ColorName_Chars];
     ColorPair color = GetColorFromPairNumber(PairNumber);
-    ColorPairToString(&color, colorNames);
+    GetStringFromColorPair(&color, colorNames);
     printf("Colors are -> %s for the PairNumber %d\n", colorNames, PairNumber);
     assert(color.majorColor == expectedMajor);
     assert(color.minorColor == expectedMinor);
