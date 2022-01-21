@@ -25,3 +25,4 @@ void testPairToNumber( enum MajorColor major, enum MinorColor minor, int expecte
 int GetPairNumberFromColor(const ColorPair* colorPair);
 ColorPair GetColorFromPairNumber(int pairNumber);
 void GetStringFromColorPair(const ColorPair* colorPair, char* buffer);
+void PrintWiringManual();
