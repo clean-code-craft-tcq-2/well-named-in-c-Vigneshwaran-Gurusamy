@@ -1,6 +1,3 @@
-#ifndef WIRINGMANUAL_H
-#define WIRINGMANUAL_H
-
 #include <stdio.h>
 #include <assert.h>
 
@@ -31,5 +28,3 @@ int GetPairNumberFromColor(const ColorPair* colorPair);
 ColorPair GetColorFromPairNumber(int pairNumber);
 void GetStringFromColorPair(const ColorPair* colorPair, char* buffer);
 void PrintWiringManual();
-
-#endif
