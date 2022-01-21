@@ -1,14 +1,16 @@
 #include "WiringManual.h"
 
 /*Test the Wiring PairNumber and Wiring colors*/
-void main() {
+int main() {
     testNumberToPair(4, WHITE, BROWN);
     testNumberToPair(5, WHITE, SLATE);
 
     testPairToNumber(BLACK, ORANGE, 12);
     testPairToNumber(VIOLET, SLATE, 25);
-    PrintWiringManual(); /*Print Wiring Manual*/
     
+    PrintWiringManual(); /*Print Wiring Manual*/
+   
+    return 0;
 }
 
 /*Print WiringManual*/
