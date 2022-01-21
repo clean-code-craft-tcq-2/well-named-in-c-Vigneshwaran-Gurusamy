@@ -4,8 +4,6 @@
 #include <stdio.h>
 #include <assert.h>
 
-#define MAXPOSSIBLECOLORS (5u)
-
 /*Declaration of Variables and Functions*/
 const int ColorName_Chars;
 
