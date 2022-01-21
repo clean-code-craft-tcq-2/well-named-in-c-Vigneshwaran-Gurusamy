@@ -28,14 +28,3 @@ void testPairToNumber(
     printf("PairNumber is %d for the Colors -> %s\n", PairNumber,colorNames);
     assert(PairNumber == expectedPairNumber);
 }
-
-
-/*Check the Wiring PairNumber and Wiring colors*/
-void main() {
-    testNumberToPair(4, WHITE, BROWN);
-    testNumberToPair(5, WHITE, SLATE);
-
-    testPairToNumber(BLACK, ORANGE, 12);
-    testPairToNumber(VIOLET, SLATE, 25);
-    PrintWiringManual();
-}
